@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="111.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="logo"><i>MIHAJANIRINA</i></div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Éducation</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= HOME ================= -->
+<section class="home">
+
+    <!-- PHOTO -->
+    <div class="photo-profil">
+        <img src="g.jpg.png" alt="Photo de Mahery Tiana">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="home-content">
+        <h1>BIENVENUE, C'EST <span>MAHERY13</span></h1>
+        <h2 class="typing-text">je suis <span></span></h2>
+
+        <p>
+            💻 <strong>Mahery Tiana</strong> 👦🏿 — étudiant en informatique (L1) à l’EMIT Fianarantsoa.
+            Curieux par nature et passionné par le code, je transforme des idées en lignes de programmation.
+            Chaque projet est pour moi une occasion d’apprendre, d’expérimenter et de progresser dans l’univers du numérique.
+            🚀 Objectif : évoluer, créer et laisser mon empreinte dans le monde tech 🙏🏿.
+        </p>
+    </div>
+
+    <!-- RÉSEAUX SOCIAUX -->
+    <div class="social-icons">
+        <a href="https://www.instagram.com/maherytiana13" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@maherytiana13" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+    </div>
+
+</section>
+
+<!-- ================= TYPING EFFECT ================= -->
+<script>
+const texts = [
+    "étudiant en informatique",
+    "développeur web junior",
+    "passionné par le code et le basket",
+];
+
+let index = 0;
+let charIndex = 0;
+const speed = 100;
+const target = document.querySelector(".typing-text span");
+
+function type() {
+    if (charIndex < texts[index].length) {
+        target.textContent += texts[index].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, speed);
+    } else {
+        setTimeout(erase, 1500);
+    }
+}
+
+function erase() {
+    if (charIndex > 0) {
+        target.textContent = texts[index].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, speed / 2);
+    } else {
+        index = (index + 1) % texts.length;
+        setTimeout(type, 500);
+    }
+}
+
+type();
+</script>
+
+</body>
+</html>
