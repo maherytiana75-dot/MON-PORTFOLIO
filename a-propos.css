@@ -1,0 +1,314 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('3.jpg.png'); /* Votre image de fond */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* HEADER – retour à l'accueil */
+header {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 30px;
+    animation: fadeInDown 0.8s ease;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    padding: 8px 20px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.logo:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px);
+}
+
+/* CONTENEUR PRINCIPAL (style de la "carte" invisible) */
+.profile {
+    max-width: 700px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6); /* Fond blanc léger pour lisibilité */
+    backdrop-filter: blur(3px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+/* CHAMPS (chaque ligne) */
+.field {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    min-width: 180px;
+    letter-spacing: 0.3px;
+}
+
+.line {
+    flex: 1;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    letter-spacing: 4px; /* espacement pour imiter les underscores */
+    border-bottom: 2px dashed #b0c4de; /* ligne pointillée légère */
+    padding-bottom: 5px;
+    transition: border-color 0.3s;
+}
+
+.line:hover {
+    border-bottom-color: #3498db;
+}
+
+/* ZONE PHOTOS existantes */
+.photos-row {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.photo-item {
+    flex: 1 1 200px;
+    min-width: 150px;
+    text-align: center;
+    animation: fadeIn 1.2s ease;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: scale(1.02);
+}
+
+.photo-item.small {
+    flex: 0.8 1 150px;
+}
+
+.photo-label {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.photo-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.photo-img:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: scale(0.98);
+}
+
+/* RANGÉE MIXTE (photo 4 + champ) */
+.row {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* CONTACT (dernière ligne) */
+.field:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ANIMATIONS existantes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* RESPONSIVE existant */
+@media (max-width: 600px) {
+    .profile {
+        padding: 25px 15px;
+    }
+    .label {
+        min-width: 120px;
+        font-size: 1rem;
+    }
+    .line {
+        font-size: 1rem;
+    }
+    .photos-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .photo-item.small {
+        flex: auto;
+    }
+}
+
+/* ===== AJOUTS DEMANDÉS (sans modifier l'existant) ===== */
+
+/* Navigation avec boutons supplémentaires */
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    border-radius: 40px;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Nouvelle section : trois photos alignées */
+.three-photos {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease;
+}
+
+.photo-card {
+    flex: 1 1 200px;
+    max-width: 220px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(3px);
+    padding: 15px 10px 10px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+    animation: fadeIn 1.2s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.photo-card-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.photo-card:hover .photo-card-img {
+    transform: scale(0.97);
+}
+
+.photo-card-caption {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 6px 10px;
+    border-radius: 30px;
+    line-height: 1.4;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 700px) {
+    .header-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .three-photos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .photo-card {
+        max-width: 280px;
+        width: 100%;
+    }
+}
