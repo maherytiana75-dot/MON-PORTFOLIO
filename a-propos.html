@@ -4,59 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos de moi</title>
-    <link rel="stylesheet" href="111.css">
+    <link rel="stylesheet" href="a-propos.css">
 </head>
-
-<body style="
-    background-image: url('3.jpg.png'); /* Vérifie bien que ce nom de fichier est exact */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
-    font-family: sans-serif;
-">
-
-<header>
-    <a href="index.html" class="logo">RETOUR À L'ACCUEIL</a>
-</header>
-
-<section class="about-modern">
-    <div class="about-card">
-        <h2 class="about-title">À propos de moi</h2>
-
-        <div class="about-grid">
-            <div class="about-info">
-                <p><strong>Nom :</strong> Mahery Tiana</p>
-                <p><strong>Prénom :</strong> MIHAJANIRINA</p>
-                <p><strong>Date de naissance :</strong> 2004</p>
-                <p><strong>Carrière :</strong> Développeur Web</p>
+<body>
+    <header>
+        <nav class="header-nav">
+            <a href="1313.html" class="logo">RETOUR À L'ACCUEIL</a>
+            <div class="nav-buttons">
+                <a href="#" class="nav-btn">PROJET</a>
+                <a href="#" class="nav-btn">COMPÉTENCES</a>
+                <a href="#" class="nav-btn">CONTACT</a>
             </div>
+        </nav>
+    </header>
 
-            <div class="about-images">
-                <div class="image-box">
-                    <img src="lieu.jpg.jpg" alt="Lieu">
-                    <span>Lieu : Antananarivo</span>
-                </div>
+    <main class="profile">
+        <!-- Nom -->
+        <div class="field">
+            <span class="label">NOM :</span>
+            <span class="line"><strong>MIHAJANIRINA</strong></span>
+        </div>
 
-                <div class="image-box">
-                    <img src="g.jpg.png" alt="Passion">
-                    <span>Passion : Création digitale</span>
-                </div>
+        <!-- Prénom -->
+        <div class="field">
+            <span class="label">PRENOM :</span>
+            <span class="line"><strong>Mahery Tiana</strong></span>
+        </div>
 
-                <div class="image-box">
-                    <img src="niveau.jfif" alt="Niveau">
-                    <span>Niveau : Étudiant motivé</span>
-                </div>
+        <!-- Date, lieu de naissance -->
+        <div class="field">
+            <span class="label">DATE ET LIEU DE NAISSANCE :</span>
+            <span class="line"><strong>06 NOVEMBRE 2007 À AMBOSITRA</strong></span>
+        </div>
+
+        <!-- TROIS PHOTOS ALIGNÉES HORIZONTALEMENT -->
+        <div class="three-photos">
+            <!-- Photo 1 : Ville d'origine -->
+            <div class="photo-card">
+                <img src="lieu.jpg.jpg" alt="Ville d'origine" class="photo-card-img">
+                <span class="photo-card-caption"><strong><i>VILLE D'ORIGINE (AMBOSITRA)</i></strong></span>
+            </div>
+            <!-- Photo 2 : Passion basket -->
+            <div class="photo-card">
+                <img src="g.jpg.png" alt="Passion basket" class="photo-card-img">
+                <span class="photo-card-caption"><strong><i>PASSION (BASKETBALL) – JOUEUR EMIBA</i></strong></span>
+            </div>
+            <!-- Photo 3 : EMIT -->
+            <div class="photo-card">
+                <img src="niveau.jfif" alt="EMIT" class="photo-card-img">
+                <span class="photo-card-caption"><strong><i>EMIT FIANARANTSOA</i></strong></span>
             </div>
         </div>
 
-        <div class="objectif">
-            🚀 Objectif : Construire des expériences web modernes
+        <!-- Niveau et parcours (conservé en dessous) -->
+        <div class="field" style="margin-top: 25px;">
+            <span class="label">NIVEAU ET PARCOURS :</span>
+            <span class="line"><strong>L1 EN INFORMATIQUE (DA2I À L'EMIT)</strong></span>
         </div>
-    </div>
-</section>
-
+    </main>
 </body>
 </html>
-
