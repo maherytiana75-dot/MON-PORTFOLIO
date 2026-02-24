@@ -329,3 +329,22 @@ nav ul li a:hover::after {
         grid-template-columns: 1fr;
     }
 }
+/* --- FOOTER --- */
+footer {
+    background: var(--primary);
+    color: #f30808;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
