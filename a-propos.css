@@ -311,27 +311,22 @@ header {
         width: 100%;
     }
 }
-/* ===================== SOCIAL ICONS ===================== */
-.social-icons {
-    display: flex;
-    gap: 22px;
-    margin-top: 30px;
+/* --- FOOTER --- */
+footer {
+    background: var(--primary);
+    color: #f30808;
+    padding: 50px 0;
+    text-align: center;
 }
 
-.social-icons a {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: rgba(0, 255, 255, 0.9);
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: block;
 }
 
-.social-icons a:hover {
-    transform: translateY(-6px) scale(1.15);
-    box-shadow: 0 0 25px #00ffff;
+.footer-copy {
+    font-size: 0.75rem;
+    opacity: 0.5;
 }
