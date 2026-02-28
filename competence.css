@@ -1,0 +1,202 @@
+/* ================= SECTION COMPÉTENCES ================= */
+
+.competences-section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.7rem;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 60px;
+    opacity: 0.8;
+}
+
+.skills-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.skill {
+    margin-bottom: 50px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.skill-icon {
+    font-size: 1.6rem;
+    transition: 0.3s ease;
+}
+
+.skill-description {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+/* Couleurs officielles */
+.html { color: #e34c26; }
+.css { color: #264de4; }
+.js { color: #f0db4f; }
+.github { color: #000; }
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    border-radius: 30px;
+    transition: width 1.6s ease-in-out;
+}
+
+/* Couleurs barres */
+.html-progress { background: #e34c26; }
+.css-progress { background: #264de4; }
+.js-progress { background: #f0db4f; }
+.github-progress { background: #333; }
+
+/* Hover */
+.skill:hover .skill-icon {
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .skill-description {
+        font-size: 0.9rem;
+    }
+}
+/* ===================== HEADER ===================== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 80px;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===================== LOGO ===================== */
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00ffff;
+    cursor: pointer;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+    text-shadow: 0 0 20px #00ffff;
+}
+/* ===================== NAV ===================== */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 17px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #00ffff;
+    transition: width 0.35s ease;
+}
+
+nav ul li a:hover {
+    color: #00ffff;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+/* --- SECTIONS --- */
+.section {
+    padding: 80px 0;
+}
+
+.bg-alt {
+    background-color: var(--bg-alt);
+}
+
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 35px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.intro-text {
+    max-width: 750px;
+    color: var(--text-muted);
+}
+/* ===== GLASS CONTENT ===== */
+.glass-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+/* ===== TEXT LISIBILITÉ ===== */
+.light-title {
+    color: #ffffff;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+}
+
+.light-text {
+    color: #f1f1f1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes compétences</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="competence.css">
+
+    <!-- Font Awesome (OBLIGATOIRE pour les logos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="logo"><i>TOUTES MES COMPETENCES</i></div>
+
+    <nav>
+        <ul>
+            <li><a href="1313.html">RETOUR A L'ACCEUIL</a></li>
+            <li><a href="a-propos.html">RETOUR AUX A PROPOS</a></li>
+            <li><a href="projet.html">RETOUR AUX PROJETS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <body style="
+background-image: url('3.jpg.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+">
+
+<!-- ================= SECTION COMPÉTENCES ================= -->
+<section id="competences" class="competences-section">
+    <div class="overlay"></div>
+        <div class="container glass-content">
+
+    <h2 class="section-title">Mes Compétences technologique</h2>
+    <p class="section-subtitle">
+       <strong>Voici les technologies que j’utilise et que je maîtrise dans mon parcours de développeur.</strong> 
+    </p>
+
+    <div class="skills-container">
+
+        <!-- HTML -->
+        <div class="skill">
+            <div class="skill-header">
+                <div class="skill-left">
+                    <i class="fab fa-html5 skill-icon html"></i>
+                    <span><strong>HTML</strong></span>
+                </div>
+                <span class="percentage">70%</span>
+            </div>
+            <p class="skill-description">
+               <strong> Bonne maîtrise de la structure des pages web et du code sémantique.</strong>
+            </p>
+            <div class="progress-bar">
+                <div class="progress html-progress" data-width="70%"></div>
+            </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="skill">
+            <div class="skill-header">
+                <div class="skill-left">
+                    <i class="fab fa-css3-alt skill-icon css"></i>
+                    <span><strong>CSS</strong></span>
+                </div>
+                <span class="percentage">50%</span>
+            </div>
+            <p class="skill-description">
+                <strong>Bonne compréhension du responsive design, flexbox et animations modernes.</strong>
+            </p>
+            <div class="progress-bar">
+                <div class="progress css-progress" data-width="50%"></div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill">
+            <div class="skill-header">
+                <div class="skill-left">
+                    <i class="fab fa-js skill-icon js"></i>
+                    <span><strong>JavaScript</strong></span>
+                </div>
+                <span class="percentage">30%</span>
+            </div>
+            <p class="skill-description">
+                <strong>Un peu débutant actuel mais en cours d'apprentisage vers les autres niveaux supérieurs.</strong>
+            </p>
+            <div class="progress-bar">
+                <div class="progress js-progress" data-width="30%"></div>
+            </div>
+        </div>
+
+        <!-- GitHub -->
+        <div class="skill">
+            <div class="skill-header">
+                <div class="skill-left">
+                    <i class="fab fa-github skill-icon github"></i>
+                    <span><strong>GitHub</strong></span>
+                </div>
+                <span class="percentage">80%</span>
+            </div>
+            <p class="skill-description">
+                <strong>Bonne maîtrise du déploiement de projets avec GitHub Pages.</strong>
+            </p>
+            <div class="progress-bar">
+                <div class="progress github-progress" data-width="80%"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+const skillsSection = document.querySelector('#competences');
+const progressBars = document.querySelectorAll('.progress');
+
+function showProgress() {
+    progressBars.forEach(bar => {
+        const value = bar.getAttribute('data-width');
+        bar.style.width = value;
+    });
+}
+
+function checkScroll() {
+    const sectionTop = skillsSection.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight * 0.8;
+
+    if (sectionTop < triggerPoint) {
+        showProgress();
+    }
+}
+
+window.addEventListener('scroll', checkScroll);
+});
+</script>
+
+</body>
+</html>
