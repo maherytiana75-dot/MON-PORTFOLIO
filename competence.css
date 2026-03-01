@@ -47,6 +47,158 @@
     font-size: 0.95rem;
     opacity: 0.85;
 }
+/* --- Styles pour les nouvelles sections Compétences --- */
+
+.skills-extra-section {
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+.skills-subtitle {
+    font-size: 1.8rem;
+    color: #d4ff00; /* Couleur d'accentuation typique de votre thème */
+    margin-bottom: 30px;
+    text-align: left;
+    border-left: 5px solid #010c0f;
+    padding-left: 15px;
+}
+
+/* Carte Mathématiques */
+.academic-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.academic-card:hover {
+    transform: translateY(-5px);
+    border-color: #000a0c;
+}
+
+.academic-icon {
+    font-size: 3rem;
+    color: #000809;
+    min-width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 50%;
+}
+
+.academic-text p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #070000;
+}
+
+/* Grille des Langues */
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.lang-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.lang-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: scale(1.02);
+    border-color: #000709;
+}
+
+.lang-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.flag-icon {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-right: 50px;
+}
+
+.lang-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #090000;
+}
+
+.lang-level {
+    font-size: 0.9rem;
+    color: #000202;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.lang-desc {
+    font-size: 0.9rem;
+    color: #0c0000;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Barres de progression */
+.progress-bar-container {
+    background: rgba(255, 255, 255, 0.1);
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #00d4ff, #005f73);
+    border-radius: 10px;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Animation douce au scroll */
+.animate-on-scroll {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .academic-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .skills-subtitle {
+        font-size: 1.5rem;
+    }
+}
 
 /* Couleurs officielles */
 .html { color: #e34c26; }
