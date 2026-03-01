@@ -1,7 +1,15 @@
 /* ================= SECTION COMPÉTENCES ================= */
 
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 .competences-section {
-    padding: 100px 10%;
+    padding: 80px 5%;
 }
 
 .section-title {
@@ -130,11 +138,12 @@
 }
 
 .flag-icon {
-    width: 200px;
-    height: 100px;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
     object-fit: cover;
-    border-radius: 30px;
-    margin-right: 50px;
+    border-radius: 20px;
+    margin-right: 0;
 }
 
 .lang-header h4 {
@@ -352,3 +361,19 @@ nav ul li a:hover::after {
     color: #f1f1f1;
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
