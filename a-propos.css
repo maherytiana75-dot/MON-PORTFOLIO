@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 body {
     background-image: url('3.jpg.png'); /* Votre image de fond */
@@ -90,6 +94,8 @@ nav ul li a:hover::after {
     padding: 40px 30px;
     border-radius: 20px;
     animation: fadeInUp 1s ease;
+        margin-top: 120px;
+    
 }
 
 /* CHAMPS (chaque ligne) */
@@ -364,4 +370,18 @@ footer {
 .footer-copy {
     font-size: 0.75rem;
     opacity: 0.5;
+}
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
