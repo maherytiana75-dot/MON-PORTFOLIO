@@ -9,13 +9,19 @@
 html {
     scroll-behavior: smooth;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* ===================== BODY ===================== */
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #6dd5fa, #2980b9, #6dd5fa);
-    background-size: 400% 400%;
-    animation: bgFlow 12s ease infinite;
+    background-image: url('3.jpg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     color: #ffffff;
     overflow-x: hidden;
 }
@@ -207,6 +213,7 @@ nav ul li a:hover::after {
         animation-delay: 0.3s;
     }
 }
+
 /* SECTION */
 .about-modern {
     display: flex;
@@ -239,7 +246,7 @@ nav ul li a:hover::after {
 /* GRID */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
 }
 
@@ -347,4 +354,52 @@ footer {
 .footer-copy {
     font-size: 0.75rem;
     opacity: 0.5;
+}
+/* ================= MOBILE IMPROVEMENT ================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .home {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .photo-profil img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+    .home-content h1 {
+        font-size: 26px;
+    }
+
+    .home-content h2 {
+        font-size: 18px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
