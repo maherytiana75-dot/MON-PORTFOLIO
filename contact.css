@@ -1,7 +1,15 @@
 /* --- SECTION CONTACT (CORRIGÉE : EFFET GLACE) --- */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 .contact {
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 8rem 5% 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -281,4 +289,19 @@ nav ul li a:hover::after {
 .intro-text {
     max-width: 750px;
     color: var(--text-muted);
+}
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
 }
